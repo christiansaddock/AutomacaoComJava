@@ -43,7 +43,7 @@ public class ApiTests {
                 .assertThat()
                 .statusCode(200)
                 .body("data.produtonome", Matchers.equalTo("css prod 1"))
-                .body("data.componentes[0].componentenome", Matchers.equalTo("Itens secundarios"))
+                .body("data.componentes[0].componentenome", Matchers.equalTo("cabos"))
                 .body("message", Matchers.equalTo("Detalhando dados do produto"));
     }
 
@@ -57,8 +57,8 @@ public class ApiTests {
                 .then()
                     .assertThat()
                         .statusCode(200)
-                        .body("data[0].componentenome", Matchers.equalTo("Itens secundarios"))
-                        .body("data[0].componentequantidade", Matchers.equalTo(0))
+                        .body("data[0].componentenome", Matchers.equalTo("cabos"))
+                        .body("data[0].componentequantidade", Matchers.equalTo(3))
                         .body("message", Matchers.equalTo("Listagem de componentes de produto realizada com sucesso"));
     }
 }
